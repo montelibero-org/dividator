@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "dividator",
+    "dividator_service",
+    "migrator",
+]

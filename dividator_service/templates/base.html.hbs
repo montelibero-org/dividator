@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/pico.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{title}}</title>
+    {{~> meta}}
+</head>
+
+<body>
+    <nav class="container-fluid">
+      <ul>
+        <li><a href="./" class="contrast" onclick="event.preventDefault()"><strong>MTL Dividends</strong></a></li>
+      </ul>
+      <ul>
+        {{#if signout}}
+        <li><a href="/signout" class="secondary">Sign out</a></li>
+        {{/if}}
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link" class="secondary">Theme</summary>
+            <ul role="listbox">
+              <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+              <li><a href="#" data-theme-switcher="light">Light</a></li>
+              <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container">
+        {{~> page}}
+    </main>
+
+    <script src="/js/minimal-theme-switcher.js"></script>
+</body>
+
+</html>

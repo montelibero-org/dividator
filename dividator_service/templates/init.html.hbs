@@ -1,0 +1,23 @@
+{{#*inline "meta"}}
+<meta http-equiv="Refresh" content="0;/signin/poll?k1={{k1}}">
+{{/inline}}
+
+{{#*inline "page"}}
+
+<article class="grid init">
+<div>
+    <hgroup>
+    <h1>Finish setup</h1>
+    <h2>Scan the code with your LN wallet. The wallet will become admin account</h2>
+    </hgroup>
+    <div class="qr-wrapper">
+        <a download="" target="_blank" href="lightning:{{lnurl}}" rel="noreferrer">
+            <img src="/qrcode/admin?k1={{k1}}">
+        </a>
+    </div>
+</div>
+<div></div>
+</article>
+
+{{/inline}}
+{{> base}}

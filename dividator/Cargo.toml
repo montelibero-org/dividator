@@ -1,0 +1,20 @@
+[package]
+name = "dividator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.19"
+serde = { version = "1.0.140", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0.31"
+schemars = "0.8.8"
+append_db = { git = "https://github.com/standardsats/append-db", rev = "22eb8a22a66f6d8f4951553cce2a497a2b7b1c8a" }
+append_db_postgres = { git = "https://github.com/standardsats/append-db", rev = "22eb8a22a66f6d8f4951553cce2a497a2b7b1c8a", features = [ "derive" ]  }
+# append_db = { path = "../../append-db/append_db" }
+# append_db_postgres = { path = "../../append-db/append_db_postgres", features = [ "derive" ] }
+sqlx = { version = "0.5", features = [ "runtime-tokio-rustls", "migrate", "macros", "postgres", "json", "chrono" ] }
+rocket = { version = "0.5.0-rc.2", default-features = false, features = [] }
+rocket_okapi = { git = "https://github.com/ThouCheese/okapi", branch = "feat/rocket0.5-rc.2", features = [] }

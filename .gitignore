@@ -1,0 +1,7 @@
+result
+target
+pgsql-data
+.s.PGSQL.*
+postgresql.log
+run.sh
+.env
